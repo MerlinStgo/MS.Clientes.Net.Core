@@ -24,7 +24,7 @@ namespace MS.Commerce.Datos
                 var parametros = new DynamicParameters();
                 parametros.Add("@Nombres", cliente.Nombres, DbType.String);
                 parametros.Add("@Apellidos", cliente.Apellidos, DbType.String);
-                parametros.Add("@Direccion", cliente.Direccion, DbType.Decimal);
+                parametros.Add("@Direccion", cliente.Direccion, DbType.String);
                 parametros.Add("@Telefono", cliente.Telefono, DbType.String);
                 parametros.Add("@Estado", cliente.Estado, DbType.Boolean);
 

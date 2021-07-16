@@ -7,7 +7,7 @@ namespace MS.Commerce.Negocio
 {
     public static class ClienteNegocio
     {
-        public static Cliente InsProducto(Cliente cliente)
+        public static Cliente InsCliente(Cliente cliente)
         {
             try
             {

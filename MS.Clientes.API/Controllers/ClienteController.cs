@@ -2,6 +2,7 @@
 using MS.Commerce.Entidad;
 using MS.Commerce.Negocio;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MS.Clientes.API.Controllers
 {
@@ -13,6 +14,24 @@ namespace MS.Clientes.API.Controllers
         public ActionResult<IEnumerable<Cliente>> GetClientes()
         {
             return ClienteNegocio.SelCliente(new Cliente());
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<Cliente> GetCliente(int id)
+        {
+            return ClienteNegocio.SelCliente(
+                new Cliente()
+                {
+                    Id = id
+                }).FirstOrDefault();
+        }
+
+        [HttpPost]
+        public ActionResult<Cliente> Crear(Cliente cliente)
+        {
+            var rptCliente = ClienteNegocio.InsCliente(cliente);
+            //return CreatedAtAction("GetCliente", new { id = rptCliente.Id }, rptCliente );
+            return rptCliente;
         }
     }
 }
