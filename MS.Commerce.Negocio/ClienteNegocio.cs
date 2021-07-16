@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace MS.Commerce.Negocio
 {
-    public class ClienteNegocio
+    public static class ClienteNegocio
     {
         public static Cliente InsProducto(Cliente cliente)
         {

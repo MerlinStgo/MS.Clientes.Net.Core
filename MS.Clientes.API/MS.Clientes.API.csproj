@@ -9,10 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Entidad\MS.Commerce.Entidad.csproj" />
     <ProjectReference Include="..\MS.Commerce.Negocio\MS.Commerce.Negocio.csproj" />
   </ItemGroup>
